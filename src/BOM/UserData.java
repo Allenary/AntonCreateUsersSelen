@@ -10,20 +10,20 @@ public class UserData {
 	private String mail;
 	private AppSettings settings;
 
-	public UserData(int userNumber) {
-		init();
+	public UserData(int userNumber,AppSettings settings) {
+//		init();
 		username = settings.getUserName() + userNumber;
 		password = settings.getPassword();
 		mail = username + "@" + settings.getMailDomain();
 	}
 
-	private void init() {
-		try {
-			settings = new AppSettings();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+//	private void init() {
+//		try {
+//			settings = new AppSettings();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 	public String getUsername() {
 		return username;
