@@ -7,12 +7,12 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 public class MyLogger {
-	public static Logger getLogger() {
+	public static Logger getLogger(String path) {
 		Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 		FileHandler fileTxt;
 		logger.setLevel(Level.INFO);
 		try {
-			fileTxt = new FileHandler("D:\\Logging.txt");
+			fileTxt = new FileHandler(path);
 			SimpleFormatter formatterTxt = new SimpleFormatter();
 			fileTxt.setFormatter(formatterTxt);
 			logger.addHandler(fileTxt);

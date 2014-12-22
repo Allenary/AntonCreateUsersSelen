@@ -1,13 +1,10 @@
 package BOM;
 
 import java.io.IOException;
-import java.util.logging.Logger;
 
 import utils.AppSettings;
-import utils.MyLogger;
 
 public class UserData {
-	private Logger log;
 	private String username;
 	private String password;
 	private String mail;
@@ -21,11 +18,10 @@ public class UserData {
 	}
 
 	private void init() {
-		log = MyLogger.getLogger();
 		try {
 			settings = new AppSettings();
 		} catch (IOException e) {
-			log.severe(e.getLocalizedMessage());
+			e.printStackTrace();
 		}
 	}
 

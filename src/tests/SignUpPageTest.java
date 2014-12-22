@@ -24,7 +24,7 @@ public class SignUpPageTest {
 
 	@BeforeClass
 	public static void init() {
-		log = MyLogger.getLogger();
+		log = MyLogger.getLogger("C:\\Nina\\log.txt");
 		log.info("Initialization");
 		driver = new FirefoxDriver();
 		wait = new WebDriverWait(driver, 15);
